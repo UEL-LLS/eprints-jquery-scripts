@@ -11,7 +11,7 @@ var fromright = "1em";
 j(document).ready(function () {
 
 
-		j('body').append('<div id="add_item"></div>');
+		j('body').append('<div id="add_item" class="visible-md visible-lg"></div>');
 		j('<input/>', {
 			value: "New Deposit",
 			id: "add_item_show",
@@ -25,7 +25,10 @@ j(document).ready(function () {
 	
 		//create div with code in it here
 		j('#add_item_content').append('<h3>Add and Item:</h3>');
-		j('#add_item_content').append('<form id="form_add_roar" method="post" accept-charset="utf-8" action="/cgi/users/home" enctype="multipart/form-data"></form>');
+		j('<div />', {
+			class: "btn-group"
+		}).appendTo('#add_item_content');
+		j('#add_item_content .btn-group').append('<form id="form_add_roar" method="post" accept-charset="utf-8" action="/cgi/users/home" enctype="multipart/form-data"></form>');
 		j('<input/>', {
 			name: "screen",
 			id: "screen",
@@ -38,7 +41,7 @@ j(document).ready(function () {
 			type: "submit",
 			class: "btn btn-primary btn-docklands-prime"
 		}).appendTo('form#form_add_roar');
-		j('#add_item_content').append('<form id="form_add_data" method="post" accept-charset="utf-8" action="http://data.uel.ac.uk/cgi/users/home" enctype="multipart/form-data"></form>');
+		j('#add_item_content .btn-group').append('<form id="form_add_data" method="post" accept-charset="utf-8" action="http://data.uel.ac.uk/cgi/users/home" enctype="multipart/form-data"></form>');
                 j('<input/>', {
                         name: "screen",
                         id: "screen",
