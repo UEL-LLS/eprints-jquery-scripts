@@ -4,9 +4,20 @@
 ***************************/
 var j = jQuery.noConflict();
 
-//button position
-var fromtop = "1em";
-var fromright = "1em";
+//Configure the repos
+var repos = {};
+repos['repo_1'] = [
+		"roar", //name
+		"Publication", //type of item
+		"http://roar.uel.ac.uk/" //url
+		];
+repos['repo_2'] = [
+		"data",
+		"Dataset",
+		"http://data.uel.ac.uk/"
+		];
+
+//console.log("output for roar-addnew.js");
 
 j(document).ready(function () {
 
@@ -28,41 +39,25 @@ j(document).ready(function () {
 		j('<div />', {
 			class: "btn-group"
 		}).appendTo('#add_item_content');
-		j('#add_item_content .btn-group').append('<form id="form_add_roar" method="post" accept-charset="utf-8" action="/cgi/users/home" enctype="multipart/form-data"></form>');
-		j('<input/>', {
-			name: "screen",
-			id: "screen",
-			value: "NewEPrint",
-			type: "hidden"
-		}).appendTo('form#form_add_roar');
-		j('<input/>', {
-			value: "New Publication",
-			name: "_action_create",
-			type: "submit",
-			class: "btn btn-docklands-prime"
-		}).appendTo('form#form_add_roar');
-		j('#add_item_content .btn-group').append('<form id="form_add_data" method="post" accept-charset="utf-8" action="http://data.uel.ac.uk/cgi/users/home" enctype="multipart/form-data"></form>');
-                j('<input/>', {
-                        name: "screen",
-                        id: "screen",
-                        value: "NewEPrint",
-                        type: "hidden"
-                }).appendTo('form#form_add_data');
-                j('<input/>', {
-                        value: "New Dataset",
-                        name: "_action_create",
-                        type: "submit",
-                        class: "btn btn-docklands-data"
-                }).appendTo('form#form_add_data');
-		
+	
+		// loop through the repos array and creat buttons for each
+		j.each(repos, function(index,value){
+			//console.log(index+": \n name: "+value['0']+"\n url: "+value['2']+"\n type: "+value['1']);
 
-
-
-		j('#').css({
-			'position': 'absolute',
-			'top': fromtop,
-			'right': fromright
-		});
+			j('#add_item_content .btn-group').append('<form id="form_add_'+value['0']+'" method="post" accept-charset="utf-8" action="'+value['2']+'/cgi/users/home" enctype="multipart/form-data"></form>');
+			j('<input/>', {
+				name: "screen",
+				id: "screen",
+				value: "NewEPrint",
+				type: "hidden"
+			}).appendTo('form#form_add_'+value['0']);
+			j('<input/>', {
+				value: "New "+value['1'],
+				name: "_action_create",
+				type: "submit",
+				class: "btn btn-docklands-prime btn-docklands-"+value['0']
+			}).appendTo('form#form_add_'+value['0']);
+		});			
 
 
 	j('#add_item_show').hover( function() {
