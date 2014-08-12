@@ -16,7 +16,8 @@ j(document).ready(function () {
 			id: "add_item_show",
 			type: "button",
 			class: "btn btn-lg btn-docklands-prime pull_right",
-			title: "Add a new item"
+			title: "Add a new item",
+			content: "New Deposit"
 		}).appendTo('#add_item');
 		j('#add_item').append('<div id="add_item"></div>');
 		
