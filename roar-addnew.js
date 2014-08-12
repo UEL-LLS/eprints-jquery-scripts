@@ -19,11 +19,12 @@ j(document).ready(function () {
 			class: "btn btn-lg btn-docklands-prime pull_right",
 			title: "Add a new item"
 		}).appendTo('#add_item');
-		j('#add_item').append('<div id="add_item"></div>');
+		j('#add_item').append('<div id="add_item_content style="width: 0;"></div>');
 		
 			
 	
 		//create div with code in it here
+		j('#add_item_content').append('<h3>Add and Item:</h3>');
 		j('#add_item_content').append('<form method="post" accept-charset="utf-8" action="/cgi/users/home" enctype="multipart/form-data"></form>');
 		j('<input/>', {
 			name: "screen",
