@@ -6,6 +6,9 @@ var j = jQuery.noConflict();
 var fromtop = "1em";
 var fromright = "1em";
 
+//do you want users to move it about?
+//var draggable = true;
+var draggable = false;
 
 
 j(document).ready(function () {
@@ -13,7 +16,10 @@ j(document).ready(function () {
 	j.getScript("http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.0/jquery-ui.min.js", function () {
 		console.log("jQueryUI Loaded");
 
-		j('body').append('<div id="addnewitem" class="draggable"></div>');
+		j('body').append('<div id="addnewitem"></div>');
+		if (draggable == true){
+			j('#addnewitem').addClass('draggable');
+		}
 		j(function() {
 			j( ".draggable" ).draggable({
 				cancel: false
