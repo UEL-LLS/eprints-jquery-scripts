@@ -12,12 +12,11 @@ j(document).ready(function () {
 
 
 		j('body').append('<div id="add_item"></div>');
-		j('<button />', {
+		j('<button>New Deposit</button>', {
 			id: "add_item_show",
 			type: "button",
 			class: "btn btn-lg btn-docklands-prime pull_right",
-			title: "Add a new item",
-			content: "New Deposit"
+			title: "Add a new item"
 		}).appendTo('#add_item');
 		j('#add_item').append('<div id="add_item"></div>');
 		
