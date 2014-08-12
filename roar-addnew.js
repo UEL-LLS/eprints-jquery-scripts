@@ -12,7 +12,8 @@ j(document).ready(function () {
 
 
 		j('body').append('<div id="add_item"></div>');
-		j('<button>New Deposit</button>', {
+		j('<input/>', {
+			value: "New Deposit",
 			id: "add_item_show",
 			type: "button",
 			class: "btn btn-lg btn-docklands-prime pull_right",
