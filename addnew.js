@@ -3,7 +3,7 @@
 var j = jQuery.noConflict();
 
 //button position
-var fromtop = "2em";
+var fromtop = "1em";
 var fromright = "1em";
 
 
