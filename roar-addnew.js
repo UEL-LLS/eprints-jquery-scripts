@@ -25,20 +25,37 @@ j(document).ready(function () {
 	
 		//create div with code in it here
 		j('#add_item_content').append('<h3>Add and Item:</h3>');
-		j('#add_item_content').append('<form method="post" accept-charset="utf-8" action="/cgi/users/home" enctype="multipart/form-data"></form>');
+		j('#add_item_content').append('<form id="form_add_roar" method="post" accept-charset="utf-8" action="/cgi/users/home" enctype="multipart/form-data"></form>');
 		j('<input/>', {
 			name: "screen",
 			id: "screen",
 			value: "NewEPrint",
 			type: "hidden"
-		}).appendTo('#addnewitem form');
+		}).appendTo('form#form_add_roar');
 		j('<input/>', {
 			value: "New Publication",
 			name: "_action_create",
 			type: "submit",
 			class: "btn btn-primary btn-docklands-prime"
-		}).appendTo('#addnewitem form');
-		j('#addnewitem').css({
+		}).appendTo('form#form_add_roar');
+		j('#add_item_content').append('<form id="form_add_data" method="post" accept-charset="utf-8" action="http://data.uel.ac.uk/cgi/users/home" enctype="multipart/form-data"></form>');
+                j('<input/>', {
+                        name: "screen",
+                        id: "screen",
+                        value: "NewEPrint",
+                        type: "hidden"
+                }).appendTo('form#form_add_data');
+                j('<input/>', {
+                        value: "New Dataset",
+                        name: "_action_create",
+                        type: "submit",
+                        class: "btn btn-primary btn-docklands-data"
+                }).appendTo('form#form_add_data');
+		
+
+
+
+		j('#').css({
 			'position': 'absolute',
 			'top': fromtop,
 			'right': fromright
