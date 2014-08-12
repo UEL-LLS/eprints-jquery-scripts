@@ -39,7 +39,7 @@ j(document).ready(function () {
 			value: "New Publication",
 			name: "_action_create",
 			type: "submit",
-			class: "btn btn-primary btn-docklands-prime"
+			class: "btn btn-docklands-prime"
 		}).appendTo('form#form_add_roar');
 		j('#add_item_content .btn-group').append('<form id="form_add_data" method="post" accept-charset="utf-8" action="http://data.uel.ac.uk/cgi/users/home" enctype="multipart/form-data"></form>');
                 j('<input/>', {
@@ -52,7 +52,7 @@ j(document).ready(function () {
                         value: "New Dataset",
                         name: "_action_create",
                         type: "submit",
-                        class: "btn btn-primary btn-docklands-data"
+                        class: "btn btn-docklands-data"
                 }).appendTo('form#form_add_data');
 		
 
