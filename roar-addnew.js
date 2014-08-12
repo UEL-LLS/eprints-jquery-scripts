@@ -19,7 +19,7 @@ j(document).ready(function () {
 			class: "btn btn-lg btn-docklands-prime pull_right",
 			title: "Add a new item"
 		}).appendTo('#add_item');
-		j('#add_item').append('<div id="add_item_content style="width: 0;"></div>');
+		j('#add_item').append('<div id="add_item_content" style="width: 0;"></div>');
 		
 			
 	
