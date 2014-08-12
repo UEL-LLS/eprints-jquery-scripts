@@ -1,4 +1,9 @@
 /**************************
+ Script to an Add New 
+ button to your repo. 
+ Few config options at the
+ top but these can be left 
+ alone to function as is.
 ***************************/
 var j = jQuery.noConflict();
 
