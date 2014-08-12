@@ -11,6 +11,10 @@ var fromright = "1em";
 var draggable = false;
 
 
+//do you want users to be able to close it? it'll keep coming back...
+//var closeable = true;
+var closeable = false;
+
 j(document).ready(function () {
 
 	j.getScript("http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.0/jquery-ui.min.js", function () {
@@ -46,27 +50,30 @@ j(document).ready(function () {
 			'top': fromtop,
 			'right': fromright
 		});
-		j('#addnewitem form').append('<button type="button" id="close-addnew" class="close"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>');
-		j('#addnewitem .close').css({
-			"float": "none",
-			"cursor": "pointer",
-			"color": "#fff",
-			"border": "1px solid #AA1111",
-			"border-radius": "12px",
-			"border-bottom-left-radius": "0px",
-			"background": "#EE3333",
-			"display": "inline-block",
-			"line-height": "0px",
-			"padding": "8px 3px",
-			"position": "relative",
-			"top": "-9px",
-			"right": "11px",
-			"z-index": "10",
-			"opacity": "1",
-		});
-		j('#close-addnew').mouseup(function() {
-			j('#addnewitem').remove();
-		});		
+
+		if (closeable == true){
+			j('#addnewitem form').append('<button type="button" id="close-addnew" class="close"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>');
+			j('#addnewitem .close').css({
+				"float": "none",
+				"cursor": "pointer",
+				"color": "#fff",
+				"border": "1px solid #AA1111",
+				"border-radius": "12px",
+				"border-bottom-left-radius": "0px",
+				"background": "#EE3333",
+				"display": "inline-block",
+				"line-height": "0px",
+				"padding": "8px 3px",
+				"position": "relative",
+				"top": "-9px",
+				"right": "11px",
+				"z-index": "10",
+				"opacity": "1",
+			});
+			j('#close-addnew').mouseup(function() {
+				j('#addnewitem').remove();
+			});		
+		}
 	});
 
 
