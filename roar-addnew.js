@@ -9,12 +9,12 @@ var repos = {};
 repos['repo_1'] = [
 		"roar", //name
 		"Publication", //type of item
-		"http://roar.uel.ac.uk/" //url
+		"http://roar.uel.ac.uk" //url (no trailing slash)
 		];
 repos['repo_2'] = [
 		"data",
 		"Dataset",
-		"http://data.uel.ac.uk/"
+		"http://data.uel.ac.uk"
 		];
 
 //console.log("output for roar-addnew.js");
