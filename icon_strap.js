@@ -18,6 +18,6 @@ j(document).ready(function () {
 
 	// replaces the img code with spans. Bootstrap sees the classes and adds the glyphicons	
 	j('img[src="/style/images/help.gif"]').replaceWith('<span class="glyphicon glyphicon-question-sign"></span>');
-	j('img[src="/style/images/required.png"]').replaceWith('<span style="#FF8700!important" class="glyphicon glyphicon-exclamation-sign"></span>');
+	j('img[src="/style/images/required.png"]').replaceWith('<span style="color: #FF8700!important" class="glyphicon glyphicon-exclamation-sign"></span>');
 	
 });
