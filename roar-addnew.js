@@ -20,7 +20,8 @@ repos['repo_2'] = [
 //console.log("output for roar-addnew.js");
 
 j(document).ready(function () {
-
+	if (window.top==window.self)
+        {
 
 		j('body').append('<div id="add_item" class="visible-md visible-lg"></div>');
 		j('<input/>', {
@@ -60,11 +61,12 @@ j(document).ready(function () {
 		});			
 
 
-	j('#add_item_show').hover( function() {
-                j('#add_item_content').addClass('display-div');
-                j('#add_item_show').addClass('hidden');
-                j('#add_item_show').parent().css('width','25em');
-                j('#add_item_content').css('width','100%');
-        })
+		j('#add_item_show').hover( function() {
+                	j('#add_item_content').addClass('display-div');
+                	j('#add_item_show').addClass('hidden');
+                	j('#add_item_show').parent().css('width','25em');
+                	j('#add_item_content').css('width','100%');
+        	})
 
+	}
 });

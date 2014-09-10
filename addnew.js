@@ -34,7 +34,7 @@ j(document).ready(function () {
 				cancel: false
 			});
 		});
-	
+
 	
 		//create div with code in it here
 		j('#addnewitem').append('<form method="post" accept-charset="utf-8" action="/cgi/users/home" enctype="multipart/form-data"></form>');
@@ -80,6 +80,4 @@ j(document).ready(function () {
 			});		
 		}
 	});
-
-
 });
