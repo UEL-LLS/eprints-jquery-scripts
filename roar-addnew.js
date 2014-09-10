@@ -36,7 +36,7 @@ j(document).ready(function () {
 			
 	
 		//create div with code in it here
-		j('#add_item_content').append('<h3>Add and Item:</h3>');
+		j('#add_item_content').append('<h3>Add an Item:</h3>');
 		j('<div />', {
 			class: "btn-group"
 		}).appendTo('#add_item_content');
