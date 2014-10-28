@@ -1,7 +1,16 @@
-/**************************
- Blank Script
+/****************************
+ colourchanger.js
 
-***************************/
+ Script to change the 
+ colours of a repo (data.uel) 
+ depending on the eprints.type 
+ (in this case "collections")
+
+ Could easily be adapted to 
+ recolour based on other 
+ metadata.
+
+*****************************/
 var j = jQuery.noConflict();
 
 var colour1 = "#8B00A3";
