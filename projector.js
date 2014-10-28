@@ -15,7 +15,9 @@ j(document).ready(function () {
 		j('.btn-docklands-prime').mouseout(function(){
                         j(this).attr('style', 'background-color: #B800D8!important');
                 });     
-		j('#summary_downloads) .panel-docklands-prime .panel-heading').attr('style', 'background-color: #B800D8!important');
+		j('#summary_downloads .panel-docklands-prime .panel-heading').attr('style', 'background-color: #B800D8!important');
+
+		j('.docklands_footer').attr('style', 'border-color: #B800D8!important');
 	};
 
 });
