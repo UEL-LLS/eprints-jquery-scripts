@@ -10,8 +10,17 @@ j(document).ready(function () {
 	//initialisting	
 	var panel = j('.ep_toolbox');	
 	var unwrap = j('.ep_toolbox_content');
-	var panelHeading = j('.ep_toolbox a, .ep_toolbox b'); 
-	var panelTextNode = j('.ep_toolbox_content').contents().filter(function () {  return this.nodeType === 3;});
+	var panelHeading = j('.ep_toolbox a'); 
+	if (j('.ep_toolbox_content b').length){
+		var panelTextNode = j('.ep_toolbox_content b');
+		alert("test");
+	}else {
+		j('.ep_toolbox_content').contents().each(function(){
+			 if(this.nodeName == "#text" && j.trim(this.nodeValue) !== ''){
+        			j(this).wrap('<div class="panel-body"><p></p></div>');
+    			} 
+		});
+	}
 
 	//add the classes and the wrappers	
 	panel.addClass('panel panel-default panel-docklands-fp');
@@ -21,7 +30,7 @@ j(document).ready(function () {
 	// Removing some stuff that isnt needed
 	panel.find('br').remove();
 	unwrap.children().unwrap();
-	j('.panel .panel-body:even').remove();
+	//j('.panel .panel-body p').is(':empty').remove();
 	panel.removeClass('ep_toolbox').addClass('frontpage-panel');
 
 });
