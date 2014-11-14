@@ -12,8 +12,8 @@ j(document).ready(function () {
 	var unwrap = j('.ep_toolbox_content');
 	var panelHeading = j('.ep_toolbox a'); 
 	if (j('.ep_toolbox_content b').length){
-		var panelTextNode = j('.ep_toolbox_content b');
-		alert("test");
+		j('.ep_toolbox_content b').wrap('<div class="panel-body"></div>');
+		
 	}else {
 		j('.ep_toolbox_content').contents().each(function(){
 			 if(this.nodeName == "#text" && j.trim(this.nodeValue) !== ''){
@@ -21,10 +21,15 @@ j(document).ready(function () {
     			} 
 		});
 	}
+	
+	//remove that b and replace with strong
+	j('.ep_toolbox_content b').replaceWith(function(){
+		return j('<strong>').html(j(this).html());
+	});
 
 	//add the classes and the wrappers	
 	panel.addClass('panel panel-default panel-docklands-fp');
-	panelTextNode.wrap('<div class="panel-body"><p></p></div>');
+	//panelTextNode.wrap('<div class="panel-body"><p></p></div>');
 	panelHeading.wrap('<div class="panel-heading"><h3 class="panel-title"></h3></div>');
 	
 	// Removing some stuff that isnt needed
