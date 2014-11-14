@@ -10,7 +10,7 @@ j(document).ready(function () {
 	//initialisting	
 	var panel = j('.ep_toolbox');	
 	var unwrap = j('.ep_toolbox_content');
-	var panelHeading = j('.ep_toolbox a'); 
+	var panelHeading = j('.ep_toolbox a, .ep_toolbox b'); 
 	var panelTextNode = j('.ep_toolbox_content').contents().filter(function () {  return this.nodeType === 3;});
 
 	//add the classes and the wrappers	
