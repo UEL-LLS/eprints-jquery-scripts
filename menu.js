@@ -13,7 +13,7 @@ j(document).ready(function () {
 	//if on side menu {
 	j('#main_page .ep_tm_key_tools').removeClass('ep_tm_key_tools').addClass('navbar-collapse collapse').attr('id','ep_menu');
 	//}else {
-	j('header .ep_tm_key_tools').removeClass('ep_tm_key_tools').addClass('navbar-collapse collapse').attr('id','ep_menu');
+	j('header .ep_tm_key_tools').removeClass('ep_tm_key_tools').addClass('nav navbar-nav navbar-right').attr('id','ep_menu_top');
 	//}
 	j('nav #ep_menu li').wrapInner('<a style="cursor:default;color:#555 " href="#"></a>');
 
