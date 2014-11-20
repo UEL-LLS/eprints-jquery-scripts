@@ -17,6 +17,6 @@ j(document).ready(function () {
 	//}
 	j('nav #ep_menu li:not(:first-child)').wrapInner('<a style="cursor:default;color:#555 " href="#"></a>');
 	j('nav #ep_menu li:first-child').wrapInner('<div class="well well-sm"></a>');
-	j('header #ep_menu li:first-child)').remove();
+	j('header #ep_menu_top li:first-child').remove();
 
 });
